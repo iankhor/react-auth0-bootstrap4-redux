@@ -1,0 +1,36 @@
+{
+  "name": "react-auth0-bootstrap4-boilerplate",
+  "license": "MIT",
+  "version": "0.0.3",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.13.0",
+    "concurrently": "^3.1.0",
+    "react-scripts": "0.8.5",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "auth0-lock": "^10.13.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "history": "^4.5.1",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "4.0.0-beta.7",
+    "react-router-dom": "v4.0.0-beta.7",
+    "reactstrap": "^4.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iankhor/react-auth0-bootstrap4-boilerplate.git"
+  },
+  "scripts": {
+    "start": "PORT=9000 react-scripts start",
+    "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
+    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
