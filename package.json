@@ -18,7 +18,8 @@
     "react-dom": "^15.4.2",
     "react-router": "4.0.0-beta.7",
     "react-router-dom": "v4.0.0-beta.7",
-    "reactstrap": "^4.3.0"
+    "reactstrap": "^4.3.0",
+    "redux": "^3.6.0"
   },
   "repository": {
     "type": "git",
