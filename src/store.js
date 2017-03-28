@@ -1,21 +1,24 @@
-import { createStore }from 'redux'
+import { createStore, applyMiddleware }from 'redux'
 import createHistory from 'history/createBrowserHistory'
-import { syncHistoryWithStore } from 'react-router-redux'
-import rootReducer from './reducer/index'
+import { routerMiddleware } from 'react-router-redux'
+import rootReducer from './reducers/index'
 
 const initialState = {
-  counter1: { 
-    count: 1,
-   },
-   counter2: {
-     count: 20
-   }
+  counter: {
+      counter1: { 
+        count: 1,
+      },
+      counter2: {
+        count: 20
+      }
+  }
 }
 
-const browserHistory = createHistory()
+const history = createHistory()
 
-const store = createHistory(rootReducer, initialState)
+const middleware = routerMiddleware(history)
 
-export const history = syncHistoryWithStore(browserHistory, store)
+const store = createStore(rootReducer, initialState, applyMiddleware(middleware))
+
 
 export default store

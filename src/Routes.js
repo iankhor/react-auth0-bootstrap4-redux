@@ -14,6 +14,11 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 //Init components
 import { auth } from './utils/init'
 
+//Redux
+import { Provider } from 'redux'
+import store, { history } from './store'
+import { ConnectedRouter } from 'react-router-redux'
+
 //Private Routes
 const PrivateRoute = ({ component, ...rest }) => (
   <Route {...rest} 
