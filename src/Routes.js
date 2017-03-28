@@ -42,12 +42,11 @@ const Routes = (props) => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <Switch>
-            <Route path="/"  exact component={App} />  
-            <Route path="/auth"  exact component={LoginTransition} />  
-            <Route path="/auth"  exact component={LoginTransition} />  
-            <Route path="/public"  exact component={Public} />  
-            <Route path="/auth/error"  exact component={AuthError} />  
-            <PrivateRoute path="/private"  exact component={Private} />  
+            <Route path="/" exact component={App} />  
+            <Route path="/auth" exact component={LoginTransition} />  
+            <Route path="/public" exact component={Public} />  
+            <Route path="/auth/error" exact component={AuthError} />  
+            <PrivateRoute path="/private" exact component={Private} />  
             <Route component={NotFound} />  
             <Route path="/" exact component={App} />  
         </Switch>

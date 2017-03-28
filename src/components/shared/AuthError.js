@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
 
 const AuthError = (props) => {
         return (
