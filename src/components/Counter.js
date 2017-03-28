@@ -4,7 +4,7 @@ import App from './App'
 
 //redux
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+// import { bindActionCreators } from 'redux' // refactored and not needed
 import * as actionCreators from './../actions/counterActions'
 
 class Counter extends Component {
@@ -29,12 +29,17 @@ class Counter extends Component {
     }
 }
 
+
 function mapStateToProps(state){
   return { counter: state.counter }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators( actionCreators, dispatch )
-}
+// refactored and not needed
+// function mapDispatchToProps(dispatch){
+//   return bindActionCreators( actionCreators, dispatch )
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+// before refactor
+// export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+
+export default connect(mapStateToProps, actionCreators)(Counter)
