@@ -3,12 +3,12 @@ const SUBTRACT = "SUBTRACT"
 
 export function add(counterToUpdate){
   return {
-    type: ADADDD,
+    type: ADD,
     counterToUpdate
   }
 }
 
-export function subtract(){
+export function subtract(counterToUpdate){
  return {
     type: SUBTRACT,
     counterToUpdate

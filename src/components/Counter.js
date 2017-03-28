@@ -2,6 +2,10 @@ import React , { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import App from './App'
 
+//redux
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actionCreators from './../actions/counterActions'
 
 class Counter extends Component {
     render(){
@@ -25,4 +29,12 @@ class Counter extends Component {
     }
 }
 
-export default Counter
+function mapStateToProps(state){
+  return { counter: state.counter }
+}
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators( actionCreators, dispatch )
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)
