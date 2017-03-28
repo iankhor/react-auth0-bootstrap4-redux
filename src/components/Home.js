@@ -52,6 +52,9 @@ class Home extends Component {
                             <li>
                                 <NavLink to="/private">Private Route</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/counter">Counter</NavLink>
+                            </li>
                         </ul>
                     </Col>
                 </Row>

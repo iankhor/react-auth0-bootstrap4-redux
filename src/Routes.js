@@ -6,6 +6,7 @@ import App from './components/App';
 import LoginTransition from './components/shared/LoginTransition';
 import Public from './components/Public';
 import Private from './components/Private';
+import Counter from './components/Counter';
 import AuthError from './components/shared/AuthError';
 
 
@@ -47,6 +48,7 @@ const Routes = (props) => {
             <Route path="/public" exact component={Public} />  
             <Route path="/auth/error" exact component={AuthError} />  
             <PrivateRoute path="/private" exact component={Private} />  
+            <PrivateRoute path="/counter" exact component={Counter} />  
             <Route component={NotFound} />  
             <Route path="/" exact component={App} />  
         </Switch>
