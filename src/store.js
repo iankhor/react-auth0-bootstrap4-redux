@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware }from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import createHistory from 'history/createBrowserHistory'
 import { routerMiddleware } from 'react-router-redux'
 import rootReducer from './reducers/index'
@@ -14,11 +14,10 @@ const initialState = {
   }
 }
 
-const history = createHistory()
+export const history = createHistory()
 
 const middleware = routerMiddleware(history)
 
 const store = createStore(rootReducer, initialState, applyMiddleware(middleware))
-
 
 export default store
